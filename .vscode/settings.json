@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "intro to nest js  modules,contollers,service providers,decorators, post creating dtos,and entitities that shape data",
-        "swagger"
+        "swagger",
+        "Query parameters"
     ]
 }

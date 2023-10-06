@@ -13,12 +13,15 @@ export class UsersService {
     },
     {
       id: 2,
-      name: 'Jane Doe',
+      name: 'Jane',
       email: 'mungaben2@',
     },
   ];
 
-  findAll(): User[] {
+  findAll(name?: string): User[] {
+    if (name) {
+      return this.users.filter((user) => user.name === name);
+    }
     return this.users;
   }
 

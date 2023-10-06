@@ -1,8 +1,8 @@
-import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
+import { ApiCreatedResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './dto/entities/user.entities';
 import { UsersService } from './users.service';
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 @ApiTags('users')
 @Controller('users')
 export class UsersController {
@@ -14,9 +14,10 @@ export class UsersController {
     isArray: true,
     description: 'get all users',
   })
+  @ApiQuery({ name: 'name', required: false })
   @Get()
-  getUsers(): User[] {
-    return this.usersService.findAll();
+  getUsers(@Query('name') name?: string): User[] {
+    return this.usersService.findAll(name);
   }
   //   get users by id
   @ApiCreatedResponse({ type: User })
