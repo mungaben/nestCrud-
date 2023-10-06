@@ -13,6 +13,7 @@ import {
   Get,
   NotAcceptableException,
   Param,
+  ParseIntPipe,
   Post,
   Query,
 } from '@nestjs/common';
@@ -42,9 +43,9 @@ export class UsersController {
   @ApiCreatedResponse({ type: User })
   @ApiNotFoundResponse({ description: 'User not found' })
   @Get(':id')
-  getUserById(@Param('id') id: string): User {
+  getUserById(@Param('id', ParseIntPipe) id: number): User {
     // hadling errors
-    const user = this.usersService.findById(Number(id));
+    const user = this.usersService.findById(id);
     if (!user) {
       throw new NotAcceptableException('User not found');
     }
