@@ -13,12 +13,9 @@
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="license.txt" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-
 <a href="https://discord.gg/j4dkUGm2" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-
 <a href="https://www.buymeacoffee.com/kamaumungad" target="_blank"><img src="https://img.shields.io/badge/buy_coffee-mungaben-brownish"/></a>
-
-<a href="https://twitter.com/Naval29193321" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+<a align="center" href="https://twitter.com/Naval29193321" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 
 </p>
 
